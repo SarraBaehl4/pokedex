@@ -36,7 +36,6 @@ public class PokemonReader {
                 
                 System.out.println("------------------");
             }
-            
             connection.disconnect();
             
         } catch (Exception e) {
