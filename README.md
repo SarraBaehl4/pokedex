@@ -1,18 +1,46 @@
-## Getting Started
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+# 1. Enoncé
 
-## Folder Structure
+Le but de cet exercice est de travailler le parsing de données mais aussi de consolider sa maîtrise des boucles et structures de données imbriquées en affichant pour l’utilisatrice quelques statistiques sur les Pokemon, à partir de cette base de données en JSON : https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/pokedex.json 
 
-The workspace contains two folders by default, where:
+Avant de commencer je vous invite à faire cela :
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Si Java n’est pas installé sur votre machine, vous pouvez le télécharger sur [ce site](https://www.oracle.com/java/technologies/downloads/#jdk17-mac). 
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Sur VSCode il existe des extensions pour compiler le java directement depuis l’IDE, vous pouvez installer directement le package ****Extension Pack for Java.****
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+Vous aurez également besoin pour le parsing JSON de télécharger [cette librairie](http://www.java2s.com/Code/Jar/j/Downloadjsonsimple11jar.htm).
 
-## Dependency Management
+[Ce tutoriel](https://www.youtube.com/watch?v=g6vvEEm2hhs) vous permettra de rajouter la librairie JSON à votre VSCode simplement en créant un projet et en le rajoutant aux librairies référentes.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+La dernière étape est cool mais assez prenante, essayez déjà de faire les 3 premières ;). 
+
+*Si la configuration du projet en Java est trop compliquée, ne perdez pas trop de temps et faites l’exo en Python.*
+
+## Etape 1 - Attrapez les tous !
+
+Pour commencer vous pouvez charger le fichier .json fournit dans le dossier de l’exercice.
+
+Ensuite, dans le langage de votre choix, lisez le fichier de données dans un programme.
+
+Enfin vous n’avez plus qu’a parser le contenu du fichier et organiser vos données sous forme d’objets.
+
+## Etape 2 - Faites les tourner en boucle !
+
+Ecrire une fonction qui permet de répondre aux questions suivantes : 
+
+- Combien y’a-t-il de Pokemon dans les données ?
+- Quels sont ceux dont le poids est supérieur à 10 kg ?
+- Ecrire une fonction qui permet de les classer par ordre croissant de poids et afficher le résultat.
+
+## Etape **3 - Evolution**
+
+Ecrire une fonction qui permet que pour un Pokemon donné en argument, afficher toutes les évolutions possibles de Pokemon (exemple : Bulbasaur -> Ivysaur -> Venusaur)
+
+## Etape 4 -  Pokedex
+
+Faites-en un joli pokedex qui permet de rechercher un Pokemon et d’avoir toutes les informations utiles dessus.
+
+Vous pouvez utiliser la librairie ****Java Swing**** ou ****Java FX**** pour faire des interfaces graphiques (GUIs).
+
+Tu as aimé faire cet exercice ou tu as des retours à nous faire ? [Clique ici !](https://airtable.com/appXbfdqY0iZhnZgd/shrbWiQDMsH63nsj4)
