@@ -4,7 +4,7 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 
-public class PokemonReader {
+public class PokemonDisplay {
     public static void main(String[] args) {
         try {
             // URL de l'API Pokémon
@@ -13,8 +13,26 @@ public class PokemonReader {
             
             // Parser le JSON
             JSONParser parser = new JSONParser();
-            JSONObject data = (JSONObject) parser.parse(new InputStreamReader(connection.getInputStream()));
-            JSONArray pokemonList = (JSONArray) data.get("pokemon");
+            // 1. Récupérer le flux d'octets bruts depuis la connexion HTTP
+            InputStream rawData = connection.getInputStream();
+            // 2. Créer un lecteur qui convertit les octets en caractères
+            // Cette étape est nécessaire car JSON est un format texte
+            InputStreamReader charReader = new InputStreamReader(rawData);
+            // 3. Parser (analyser) le contenu JSON pour créer une structure de données en mémoire
+            // Le parser lit caractère par caractère et identifie la structure JSON
+            Object parsedContent = parser.parse(charReader);
+            // 4. Convertir (cast) le résultat en JSONObject puisque nous savons que le document commence par '{'
+            JSONObject data = (JSONObject) parsedContent;
+
+            //Extraire la valeur associée à la clé "pokemon" de l'objet JSON principal
+            Object pokemonValue = data.get("pokemon");
+            //// 2. Vérifier que la valeur n'est pas null (optionnel mais recommandé)
+            if (pokemonValue == null) {
+            throw new RuntimeException("La clé 'pokemon' n'existe pas dans le JSON");
+            }
+            // 3. Convertir la valeur en JSONArray car nous savons que c'est un tableau
+            JSONArray pokemonList = (JSONArray) pokemonValue;
+            
             
             // Ordre exact des champs dans l'API Pokémon
             List<String> fieldOrder = Arrays.asList(

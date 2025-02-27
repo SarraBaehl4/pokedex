@@ -1,9 +1,8 @@
 import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
 
-public class NbOfPokemons {
+public class Pokemonscharacteristic {
     public static void main(String[] args) {
-        // Récupérer la liste des Pokémon depuis l'API
+        // Récupérer la liste des Pokémons depuis l'API
         JSONArray pokemonList = PokemonAPI.getPokemonList();
 
         // Vérifier si la récupération a réussi
@@ -12,5 +11,5 @@ public class NbOfPokemons {
         } else {
             System.out.println("Erreur lors de la récupération des Pokémon.");
         }
-    }
+    } 
 }
