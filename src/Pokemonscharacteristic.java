@@ -8,7 +8,7 @@ public class Pokemonscharacteristic {
 
         // Vérifier si la récupération a réussi
         if (pokemonList != null) {
-            System.out.println("Nombre total de Pokémon : " + pokemonList.size());
+            System.out.println("Nombre total de Pokémon dans l'API: " + pokemonList.size());
         } else {
             System.out.println("Erreur lors de la récupération des Pokémon.");
         }
@@ -32,6 +32,6 @@ public class Pokemonscharacteristic {
                 }
             }
             
-            System.out.println("Nombre total des pokémons pesant plus de 10kg: " + nbPokemon10Kg);
+            System.out.println("Nombre total des pokémons pesant 10kg et plus: " + nbPokemon10Kg);
     } 
 }
