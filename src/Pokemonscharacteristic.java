@@ -26,7 +26,7 @@ public class Pokemonscharacteristic {
                     weight = Double.parseDouble(weightStr.replace("kg", "").trim());
                 }
                 
-                if (weight > 10.0) {
+                if (weight >= 10.0) {
                     nbPokemon10Kg++;
                     System.out.println(pokemon.get("name") + " - " + weightStr);
                 }
